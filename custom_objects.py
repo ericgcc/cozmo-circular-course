@@ -52,7 +52,7 @@ def nearest_intersection(p_x, p_y, points):
     dy_2 = (p_y - points[1][y])
     dist_2 = sqrt(dx_2**2 + dy_2**2)
 
-    if dist_0 < dist_1:
+    if dist_1 < dist_2:
         return points[0]
     return points[1]
 

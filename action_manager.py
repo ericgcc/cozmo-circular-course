@@ -221,7 +221,7 @@ class ActionManager:
         if len(cube) < 1:
             print("Error: 1 cube needed")
         else:
-            self.robot.roll_cube(cube[0], approach_angle=degrees(-90), num_retries=2)
+            self.robot.roll_cube(cube[0], approach_angle=degrees(-90), num_retries=2).wait_for_completed()
 
     def hit_cube(self):
         lookaround = self.robot.start_behavior(cozmo.behavior.BehaviorTypes.LookAroundInPlace)
